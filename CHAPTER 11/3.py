@@ -28,12 +28,12 @@ for i in range(len(BacaFile)):
         
 if(status == "Tersedia"):
     print("\nData Peminjam & pinjaman Buku")
-    print("Kode Member Anda              : ", splitted[0])
-    print("Nama Member Anda             : ", splitted[1])
+    print("Kode Member Anda                         : ", splitted[0])
+    print("Nama Member Anda                         : ", splitted[1])
     print("Judul Buku Yang Anda pinjam              : ", splitted[2])
-    print("Tanggal Mulai Peminjaman buku : ", splitted[3])
-    print("Tanggal Maks Peminjaman buku  : ", splitted[4])
-    print("Tanggal Pengembalian buku    : ", datetime.date(datetime.now()))
+    print("Tanggal Mulai Peminjaman buku            : ", splitted[3])
+    print("Tanggal Maks Peminjaman buku             : ", splitted[4])
+    print("Tanggal Pengembalian buku                : ", datetime.date(datetime.now()))
     trlmbt = diffDate(splitted[4])
     denda = 2000 * abs(trlmbt)
     if(trlmbt >= 0):
