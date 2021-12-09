@@ -1,4 +1,6 @@
 from datetime import*
+from datetime import*
+from datetime import*
 
 def diffDate(x):
     tanggal = x.split("-")
@@ -23,14 +25,15 @@ for i in range(len(BacaFile)):
         status = "Tidak Tersedia"
         continue
 
+        
 if(status == "Tersedia"):
     print("\nData Peminjam & pinjaman Buku")
-    print("Kode Member              : ", splitted[0])
-    print("Nama Member              : ", splitted[1])
-    print("Judul Buku               : ", splitted[2])
-    print("Tanggal Mulai Peminjaman : ", splitted[3])
-    print("Tanggal Maks Peminjaman  : ", splitted[4])
-    print("Tanggal Pengembalian     : ", datetime.date(datetime.now()))
+    print("Kode Member Anda              : ", splitted[0])
+    print("Nama Member Anda             : ", splitted[1])
+    print("Judul Buku Yang Anda pinjam              : ", splitted[2])
+    print("Tanggal Mulai Peminjaman buku : ", splitted[3])
+    print("Tanggal Maks Peminjaman buku  : ", splitted[4])
+    print("Tanggal Pengembalian buku    : ", datetime.date(datetime.now()))
     trlmbt = diffDate(splitted[4])
     denda = 2000 * abs(trlmbt)
     if(trlmbt >= 0):
@@ -38,7 +41,8 @@ if(status == "Tersedia"):
         print("Denda : 0")
         
     else:
-        print("Terlambat : ", abs(trlmbt))
+        print("Anda Terlambat : ", abs(trlmbt))
         print("Denda : ", denda)
+        
 else :
-    print("Data Peminjaman Tidak Ditemukan")
+    print("Maaf data Peminjam & pinjaman anda Tidak Ditemukan")
